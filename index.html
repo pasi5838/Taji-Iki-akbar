@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="manifest" href="manifest.json" />
+  <title>Game Berhitung</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="game-container">
+    <h1>Game Berhitung</h1>
+    <div id="question">Memuat soal...</div>
+    <div id="choices"></div>
+    <button onclick="resetGame()">Mulai Ulang</button>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js');
+      });
+    }
+  </script>
+</body>
+</html>
